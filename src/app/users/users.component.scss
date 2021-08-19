@@ -1,0 +1,129 @@
+$blue: #1976d2;
+$gray: #dfdada;
+
+$deep-blue: #3a44f0;
+$green: #3eb084;
+$orange: #eeaf0b;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
+.search {
+  align-items: center;
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+}
+
+.search-title {
+ font-size: 0.9rem;
+}
+
+.title-img {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+}
+
+.search-form {
+  background-color: $gray;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.form-input {
+  background-color: $gray;
+  border: none;
+  width: 15rem;
+}
+
+.form-input::placeholder {
+  color: black;
+  font-weight: 900;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.input-img {
+  width: 0.8rem;
+}
+
+.users {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);;
+  grid-template-rows: auto;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+.card {
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.card-header {
+  align-items: center;
+  background-color: $blue;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem;
+}
+
+.header-title {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.header-img {
+  background-color: $deep-blue;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  width: 0.9rem;
+}
+
+.card-body {
+ display: flex;
+ padding: 1rem;
+ background-color: white;
+ border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.card-img {
+  border-radius: 0.3rem;
+  margin-right: 1rem;
+  padding: 0.3rem 0.5rem;
+  width: 3rem;
+}
+
+.hombre {
+  background-color: $green;
+}
+
+.mujer {
+  background-color: $orange;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-city {
+  margin-bottom: 0.5rem;
+}
