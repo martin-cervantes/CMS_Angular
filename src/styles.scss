@@ -19,6 +19,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   line-height: 1;
+  font-family: Poppins;
 }
 
 ol, ul {
@@ -47,4 +48,10 @@ q {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("assets/fonts/Poppins-Bold.otf")
+    format('opentype');
 }

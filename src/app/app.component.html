@@ -1,85 +1,118 @@
-<style>
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+<nav>
+  <div class="navbar">
+    <a class="navbar-brand" href="#">CMS Angular</a>
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
+    <button class="navbar-btn">Agregar usuario <img class="btn-img" src="assets/img/icono_agregar.svg" alt="Agregar Usuario"></button>
+  </div>
+</nav>
 
-  p {
-    margin: 0;
-  }
+<div class="container" role="main">
+  <div class="search">
+      <h1 class="search-title"><img class="title-img" src="assets/img/icono_usuarios.svg" alt="">Usuarios</h1>
 
-  .toolbar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-  }
+      <div class="search-form">
+        <input class="form-input" name="search" type="text"  placeholder="Buscar">
+        <img class="input-img" src="assets/img/icono_buscar.svg" alt="Buscar">
+      </div>
+  </div>
 
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
+  <div class="users">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="header-title">Alejandro Garcia</h2>
+        <img class="header-img" src="./assets/img/icono_editar.svg" alt="Editar">
+      </div>
 
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
+      <div class="card-body">
+        <img class="card-img hombre" src="./assets/img/icono_hombre.svg" alt="Alejandro Garcia">
 
-  a:hover {
-    color: #125699;
-  }
+        <div class="card-text">
+          <p class="text-city">Ciudad Juarez</p>
+          <p class="text-phone">(656) 123-45-67</p>
+        </div>
+      </div>
+    </div>
 
-  footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-  }
+    <div class="card">
+      <div class="card-header">
+        <h2 class="header-title">Alejandro Garcia</h2>
+        <img class="header-img" src="./assets/img/icono_editar.svg" alt="Editar">
+      </div>
 
-  footer a {
-    display: flex;
-    align-items: center;
-  }
+      <div class="card-body">
+        <img class="card-img mujer" src="./assets/img/icono_mujer.svg" alt="Alejandro Garcia">
 
-  svg#clouds {
-    position: fixed;
-    bottom: -160px;
-    left: -230px;
-    z-index: -10;
-    width: 1920px;
-  }
-</style>
+        <div class="card-text">
+          <p class="text-city">Ciudad Juarez</p>
+          <p class="text-phone">(656) 123-45-67</p>
+        </div>
+      </div>
+    </div>
 
-<div class="toolbar">
-  <span>Welcome</span>
-</div>
+    <div class="card">
+      <div class="card-header">
+        <h2 class="header-title">Alejandro Garcia</h2>
+        <img class="header-img" src="./assets/img/icono_editar.svg" alt="Editar">
+      </div>
 
-<div class="content" role="main">
+      <div class="card-body">
+        <img class="card-img hombre" src="./assets/img/icono_hombre.svg" alt="Alejandro Garcia">
+
+        <div class="card-text">
+          <p class="text-city">Ciudad Juarez</p>
+          <p class="text-phone">(656) 123-45-67</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="header-title">Alejandro Garcia</h2>
+        <img class="header-img" src="./assets/img/icono_editar.svg" alt="Editar">
+      </div>
+
+      <div class="card-body">
+        <img class="card-img mujer" src="./assets/img/icono_mujer.svg" alt="Alejandro Garcia">
+
+        <div class="card-text">
+          <p class="text-city">Ciudad Juarez</p>
+          <p class="text-phone">(656) 123-45-67</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="header-title">Alejandro Garcia</h2>
+        <img class="header-img" src="./assets/img/icono_editar.svg" alt="Editar">
+      </div>
+
+      <div class="card-body">
+        <img class="card-img hombre" src="./assets/img/icono_hombre.svg" alt="Alejandro Garcia">
+
+        <div class="card-text">
+          <p class="text-city">Ciudad Juarez</p>
+          <p class="text-phone">(656) 123-45-67</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="header-title">Alejandro Garcia</h2>
+        <img class="header-img" src="./assets/img/icono_editar.svg" alt="Editar">
+      </div>
+
+      <div class="card-body">
+        <img class="card-img mujer" src="./assets/img/icono_mujer.svg" alt="Alejandro Garcia">
+
+        <div class="card-text">
+          <p class="text-city">Ciudad Juarez</p>
+          <p class="text-phone">(656) 123-45-67</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -90,5 +123,3 @@
   </svg>
 
 </div>
-
-<router-outlet></router-outlet>
