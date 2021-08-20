@@ -2,6 +2,8 @@ $blue: #1976d2;
 
 nav {
   background-color: $blue;
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 
@@ -37,4 +39,12 @@ nav {
 .btn-img {
   margin-left: 0.3rem;
   width: 0.7rem;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 150vw;
 }
