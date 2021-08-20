@@ -17,4 +17,12 @@ export class UsersComponent implements OnInit {
       this.users = response;
     })
   }
+
+  getImage(gender: string) {
+    if (gender == 'm') {
+      return './assets/img/icono_hombre.svg'
+    }
+
+    return './assets/img/icono_mujer.svg'
+  }
 }

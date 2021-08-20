@@ -1,9 +1,14 @@
 <div class="container" role="main">
   <div class="search">
-      <h1 class="search-title"><img class="title-img" src="assets/img/icono_usuarios.svg" alt="">Usuarios</h1>
+      <h1 class="search-title">
+        <img class="title-img" src="assets/img/icono_usuarios.svg" alt="">
+
+        Usuarios
+      </h1>
 
       <div class="search-form">
         <input id="search" class="form-input" placeholder="Buscar">
+
         <img class="input-img" src="assets/img/icono_buscar.svg" alt="Buscar">
       </div>
   </div>
@@ -12,11 +17,17 @@
     <div class="card" *ngFor="let user of users">
       <div class="card-header">
         <h2 class="header-title">{{ user.first_name }} {{ user.last_name }}</h2>
+        
         <img class="header-img" src="./assets/img/icono_editar.svg" alt="Editar">
       </div>
 
       <div class="card-body">
-        <img class="card-img hombre" src="./assets/img/icono_hombre.svg" alt="Alejandro Garcia">
+        <img
+          class="card-img"
+          [ngClass]="user.gender == 'm' ? 'hombre' : 'mujer'"
+          [src]="getImage(user.gender)"
+          alt="{{ user.first_name }} {{ user.last_name }}"
+        >
 
         <div class="card-text">
           <p class="text-city">{{ user.location }}</p>
