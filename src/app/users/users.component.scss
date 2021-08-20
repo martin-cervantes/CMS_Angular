@@ -16,6 +16,7 @@ $orange: #eeaf0b;
   align-items: center;
   display: flex;
   height: 4rem;
+  padding: 0 0.5rem;
   justify-content: space-between;
 }
 
@@ -31,6 +32,7 @@ $orange: #eeaf0b;
 .search-form {
   background-color: $gray;
   border-radius: 1rem;
+  cursor: text;
   padding: 0.5rem 1rem;
 }
 
@@ -56,9 +58,9 @@ $orange: #eeaf0b;
 .users {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  padding-bottom: 3rem;
+  padding: 0 0.5rem 3rem 0.5rem;
   min-height: calc(100vh - 39rem);
 }
 
@@ -120,4 +122,28 @@ $orange: #eeaf0b;
 
 .text-city {
   margin-bottom: 0.5rem;
+}
+
+
+@media (max-width: 950px) {
+  .users {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .users {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .users {
+    padding: 0 1rem 3rem 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form-input {
+    display: none;
+  }
 }
