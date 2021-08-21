@@ -39,6 +39,7 @@ $orange: #eeaf0b;
 .form-input {
   background-color: $gray;
   border: none;
+  display: none;
   width: 15rem;
 }
 
@@ -141,9 +142,5 @@ $orange: #eeaf0b;
   .users {
     padding: 0 1rem 3rem 1rem;
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .form-input {
-    display: none;
   }
 }

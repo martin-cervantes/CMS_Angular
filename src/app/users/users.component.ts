@@ -9,6 +9,8 @@ import { UserService } from './user.service'
 
 export class UsersComponent implements OnInit {
   users: any;
+  input: any;
+  title: any;
 
   constructor(private userService:UserService) { }
 
@@ -24,5 +26,24 @@ export class UsersComponent implements OnInit {
     }
 
     return './assets/img/icono_mujer.svg'
+  }
+
+  onClick() {
+    this.input = document.getElementById("search") as HTMLElement
+
+    if (this.input.width == 0) this.showInput();
+
+    this.input.focus()
+  }
+
+  showInput() {
+    this.title = document.getElementById("title") as HTMLElement
+    this.title.style.display = "none"
+    this.input.style.display = "inline"
+  }
+
+  focusOut() {
+    this.title.style.display = "inline"
+    this.input.style.display = "none"
   }
 }
