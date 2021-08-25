@@ -9,8 +9,10 @@ import { UserService } from './user.service'
 
 export class UsersComponent implements OnInit {
   users: any;
-  input: any;
-  title: any;
+  elementInput: any;
+  elementTitle: any;
+  modal = false;
+  elementModal: any;
 
   constructor(private userService:UserService) { }
 
@@ -29,21 +31,32 @@ export class UsersComponent implements OnInit {
   }
 
   onClick() {
-    this.input = document.getElementById("search") as HTMLElement
+    this.elementInput = document.getElementById("search") as HTMLElement
 
-    if (this.input.width == 0) this.showInput();
+    if (this.elementInput.width == 0) this.showInput();
 
-    this.input.focus()
+    this.elementInput.focus()
   }
 
   showInput() {
-    this.title = document.getElementById("title") as HTMLElement
-    this.title.style.display = "none"
-    this.input.style.display = "inline"
+    this.elementTitle = document.getElementById("title") as HTMLElement
+    this.elementTitle.style.display = "none"
+    this.elementInput.style.display = "inline"
   }
 
   focusOut() {
-    this.title.style.display = "inline"
-    this.input.style.display = "none"
+    this.elementTitle.style.display = "inline"
+    this.elementInput.style.display = "none"
+  }
+
+  displayModal(user?: any) {
+    console.log('show modal', user)
+    this.elementModal = document.getElementById("modal") as HTMLElement
+    this.elementModal.style.display = "block"
+  }
+
+  hideModal() {
+    this.elementModal = document.getElementById("modal") as HTMLElement
+    this.elementModal.style.display = "none"
   }
 }

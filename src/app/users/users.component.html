@@ -18,7 +18,7 @@
       <div class="card-header">
         <h2 class="header-title">{{ user.first_name }} {{ user.last_name }}</h2>
 
-        <img class="header-img" src="./assets/img/icono_editar.svg" alt="Editar">
+        <img class="header-img" (click)="displayModal(user)" src="./assets/img/icono_editar.svg" alt="Editar">
       </div>
 
       <div class="card-body">
@@ -35,5 +35,47 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <img class="close-img" (click)="hideModal()" src="./assets/img/icono_cerrar.svg" alt="Cerrar" title="Cerrar">
+
+    <h1 class="modal-title">Agregar Usuarios</h1>
+
+    <form class="">
+      <div class="form-container">
+        <div class="form-controls">
+          <label for="first_name">Nombre:</label>
+          <input class="modal-input" type="text" name="first_name" value="">
+        </div>
+
+        <div class="form-controls">
+          <label for="last_name">Apellido:</label>
+          <input class="modal-input" type="text" name="last_name" value="">
+        </div>
+
+        <div class="form-controls">
+          <label for="location">Ubicaci&oacute;n:</label>
+          <input class="modal-input" type="text" name="location" value="">
+        </div>
+
+        <div class="form-controls">
+          <label for="phone_number">Celular:</label>
+          <input class="modal-input" type="text" name="phone_number" value="">
+        </div>
+
+        <div class="form-controls">
+          <div class="options">
+            <label for="gender"><input type="radio" name="gender" value="m" checked> Hombre</label>
+            <label for="gender"><input type="radio" name="gender" value="f"> Mujer</label>
+          </div>
+        </div>
+      </div>
+
+      <input class="form-btn" type="submit" value="Enviar">
+
+      <a class="form-cancel" (click)="hideModal()">Cancelar</a>
+    </form>
   </div>
 </div>
