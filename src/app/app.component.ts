@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'CMS Angular';
+  elementModal: any;
+
+  displayModal() {
+    this.elementModal = document.getElementById("modal") as HTMLElement
+    this.elementModal.style.display = "block"
+  }
 }
