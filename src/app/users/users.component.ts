@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from './user.service'
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-users',
@@ -11,8 +11,15 @@ export class UsersComponent implements OnInit {
   users: any;
   elementInput: any;
   elementTitle: any;
-  modal = false;
   elementModal: any;
+  u = {
+    id: '',
+    first_name: '',
+    last_name: '',
+    location: '',
+    phone_number: '',
+    gender: 'm',
+  }
 
   constructor(private userService:UserService) { }
 
@@ -50,13 +57,35 @@ export class UsersComponent implements OnInit {
   }
 
   displayModal(user?: any) {
-    console.log('show modal', user)
     this.elementModal = document.getElementById("modal") as HTMLElement
     this.elementModal.style.display = "block"
+    if (user){
+      this.u = {
+          id: user.id,
+          first_name: user.first_name,
+          last_name: user.last_name,
+          location: user.location,
+          phone_number: user.phone_number,
+          gender: user.gender,
+        }
+    }
   }
 
   hideModal() {
     this.elementModal = document.getElementById("modal") as HTMLElement
     this.elementModal.style.display = "none"
+    this.reset()
+  }
+
+  reset() {
+    this.editing = false
+    this.u = {
+        id: '',
+        first_name: '',
+        last_name: '',
+        location: '',
+        phone_number: '',
+        gender: 'm',
+      }
   }
 }
