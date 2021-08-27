@@ -12,6 +12,7 @@ export class UsersComponent implements OnInit {
   elementInput: any;
   elementTitle: any;
   elementModal: any;
+  editing = false;
   u = {
     id: '',
     first_name: '',
@@ -69,6 +70,7 @@ export class UsersComponent implements OnInit {
           gender: user.gender,
         }
     }
+    this.editing = true
   }
 
   hideModal() {
@@ -87,5 +89,23 @@ export class UsersComponent implements OnInit {
         phone_number: '',
         gender: 'm',
       }
+  }
+
+  guardar() {
+    if (this.editing) {
+      this.userService.updateUser(this.u).subscribe(response => {
+        this.users = response;
+      })
+    } else {
+      this.userService.createUser(this.u).subscribe(response => {
+        this.users = response;
+      })
+    }
+    
+    this.hideModal();
+
+    this.userService.getUsers().subscribe(response => {
+      this.users = response;
+    })
   }
 }
