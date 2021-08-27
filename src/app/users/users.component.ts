@@ -12,6 +12,7 @@ export class UsersComponent implements OnInit {
   elementInput: any;
   elementTitle: any;
   elementModal: any;
+  string = '';
   editing = false;
   u = {
     id: '',
@@ -101,10 +102,16 @@ export class UsersComponent implements OnInit {
         this.users = response;
       })
     }
-    
+
     this.hideModal();
 
     this.userService.getUsers().subscribe(response => {
+      this.users = response;
+    })
+  }
+
+  search() {
+    this.userService.search(this.string).subscribe(response => {
       this.users = response;
     })
   }

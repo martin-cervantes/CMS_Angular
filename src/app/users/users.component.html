@@ -7,7 +7,7 @@
       </h1>
 
       <div class="search-form" (click)="onClick()">
-        <input id="search" class="form-input" placeholder="Buscar" on-focusout="focusOut()">
+        <input id="search" class="form-input" (keyup)="search()" [(ngModel)]="string" placeholder="Buscar" on-focusout="focusOut()">
 
         <img class="input-img" src="assets/img/icono_buscar.svg" alt="Buscar">
       </div>
