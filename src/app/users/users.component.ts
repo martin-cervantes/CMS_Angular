@@ -95,6 +95,20 @@ export class UsersComponent implements OnInit {
   guardar($event: any) {
     $event.preventDefault()
 
+    if (this.u.firstName == '') {
+      alert('First Name Can\'t be Empty')
+      return;
+    } else if (this.u.lastName === '') {
+      alert('Last Name Can\'t be Empty')
+      return;
+    } else if (this.u.location === '') {
+      alert('Location can\'t be Empty')
+      return;
+    } else if (this.u.phone === '') {
+      alert('Phone can\'t be Empty')
+      return;
+    }
+
     if (this.editing) {
       this.userService.updateUser(this.u).subscribe(response => {
         this.users = response;
