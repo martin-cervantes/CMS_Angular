@@ -1,0 +1,269 @@
+$blue: #1976d2;
+$gray: #dfdada;
+
+$light-blue: #6593f9;
+$deep-blue: #3a44f0;
+$green: #3eb084;
+$orange: #eeaf0b;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
+.search {
+  align-items: center;
+  display: flex;
+  height: 4rem;
+  padding: 0 0.5rem;
+  justify-content: space-between;
+}
+
+.search-title {
+ font-size: 0.9rem;
+}
+
+.title-img {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+}
+
+.search-form {
+  background-color: $gray;
+  border-radius: 1rem;
+  cursor: text;
+  padding: 0.5rem 1rem;
+}
+
+.form-input {
+  background-color: $gray;
+  border: none;
+  display: none;
+  width: 15rem;
+}
+
+.form-input::placeholder {
+  color: black;
+  font-weight: 900;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.input-img {
+  width: 0.8rem;
+}
+
+.users {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  padding: 0 0.5rem 3rem 0.5rem;
+  min-height: calc(100vh - 39rem);
+}
+
+.card {
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.card-header {
+  align-items: center;
+  background-color: $blue;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem;
+}
+
+.header-title {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.header-img {
+  background-color: $deep-blue;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  width: 0.9rem;
+}
+
+.card-body {
+ display: flex;
+ padding: 1rem;
+ background-color: white;
+ border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.card-img {
+  border-radius: 0.3rem;
+  margin-right: 1rem;
+  padding: 0.3rem 0.5rem;
+  width: 3rem;
+}
+
+.hombre {
+  background-color: $green;
+}
+
+.mujer {
+  background-color: $orange;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-city {
+  margin-bottom: 0.5rem;
+}
+
+/* modal */
+
+.modal {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  border-radius: 1rem;
+  margin: 10% auto 0;
+  padding: 2rem;
+  width: 45%;
+}
+
+.close-img {
+  left: 99%;
+  position: relative;
+  top: -0.7rem;
+  width: 1rem;
+}
+
+.close-img:hover,
+.close-img:focus {
+  cursor: pointer;
+}
+
+.modal-title {
+  border-bottom: 2px solid $gray;
+  font-size: 1.3rem;
+  padding-bottom: 1.8rem;
+  text-align: center;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0.8rem 0;
+}
+
+.form-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.modal-input {
+  border-radius: 0.8rem;
+  border: none;
+  background-color: $gray;
+  padding: 0.7rem;
+  width: 90%;
+}
+
+.modal-input:focus {
+  outline: 1px solid $blue;
+}
+
+.options {
+  display: flex;
+}
+
+.form-btn {
+  background-color: $blue;
+  border: 0;
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-family: Poppins;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.6rem;
+  margin-top: 1rem;
+  width: 5rem;
+}
+
+.form-btn:hover {
+  background-color: $light-blue;
+}
+
+.form-cancel {
+  color: $blue;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.form-cancel:hover {
+  color: $light-blue;
+  cursor: pointer;
+}
+
+/* media queries */
+
+@media (max-width: 950px) {
+  .users {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .modal-content {
+    width: 65%;
+  }
+}
+
+@media (max-width: 750px) {
+  .users {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-content {
+    width: 75%;
+  }
+}
+
+@media (max-width: 550px) {
+  .users {
+    padding: 0 1rem 3rem 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

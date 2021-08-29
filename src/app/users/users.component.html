@@ -1,0 +1,81 @@
+<div class="container" role="main">
+  <div class="search">
+      <h1 class="search-title">
+        <img class="title-img" src="assets/img/icono_usuarios.svg" alt="">
+
+        <span id="title">Usuarios</span>
+      </h1>
+
+      <div class="search-form" (click)="onClick()">
+        <input id="search" class="form-input" (keyup)="search()" [(ngModel)]="string" placeholder="Buscar" on-focusout="focusOut()">
+
+        <img class="input-img" src="assets/img/icono_buscar.svg" alt="Buscar">
+      </div>
+  </div>
+
+  <div class="users">
+    <div class="card" *ngFor="let user of users">
+      <div class="card-header">
+        <h2 class="header-title">{{ user.firstName }} {{ user.lastName }}</h2>
+
+        <img class="header-img" (click)="displayModal(user)" src="./assets/img/icono_editar.svg" alt="Editar">
+      </div>
+
+      <div class="card-body">
+        <img
+          class="card-img"
+          [ngClass]="user.gender == 'm' ? 'hombre' : 'mujer'"
+          [src]="getImage(user.gender)"
+          alt="{{ user.first_name }} {{ user.last_name }}"
+        >
+
+        <div class="card-text">
+          <p class="text-city">{{ user.location }}</p>
+          <p class="text-phone">{{ user.phone }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <img class="close-img" (click)="hideModal()" src="./assets/img/icono_cerrar.svg" alt="Cerrar" title="Cerrar">
+
+    <h1 class="modal-title">Agregar Usuarios</h1>
+
+    <form class="">
+      <div class="form-container">
+        <div class="form-controls">
+          <label for="first_name">Nombre:</label>
+          <input class="modal-input" type="text" [(ngModel)]="u.firstName" name="firstName">
+        </div>
+
+        <div class="form-controls">
+          <label for="last_name">Apellido:</label>
+          <input class="modal-input" type="text" [(ngModel)]="u.lastName" name="lastName">
+        </div>
+
+        <div class="form-controls">
+          <label for="location">Ubicaci&oacute;n:</label>
+          <input class="modal-input" type="text" [(ngModel)]="u.location" name="location">
+        </div>
+
+        <div class="form-controls">
+          <label for="phone_number">Celular:</label>
+          <input class="modal-input" type="text" [(ngModel)]="u.phone" name="phone">
+        </div>
+
+        <div class="form-controls">
+          <div class="options">
+            <label for="gender"><input type="radio" [(ngModel)]="u.gender" name="gender" value="m"> Hombre</label>
+            <label for="gender"><input type="radio" [(ngModel)]="u.gender" name="gender" value="f"> Mujer</label>
+          </div>
+        </div>
+      </div>
+
+      <button class="form-btn" type="submit" (click)="guardar($event)">Guardar</button>
+
+      <a class="form-cancel" (click)="hideModal()">Cancelar</a>
+    </form>
+  </div>
+</div>

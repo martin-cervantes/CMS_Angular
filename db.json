@@ -1,0 +1,204 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Victoria",
+      "lastName": "Terrazas",
+      "location": "New York",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "2",
+      "firstName": "Alejandro",
+      "lastName": "Garcia",
+      "location": "Los Angeles",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "3",
+      "firstName": "Laura",
+      "lastName": "Ramirez",
+      "location": "Chicago",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "4",
+      "firstName": "Mario",
+      "lastName": "Rodriguez",
+      "location": "Houston",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "5",
+      "firstName": "Liam",
+      "lastName": "Smith",
+      "location": "Phoenix",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "6",
+      "firstName": "William",
+      "lastName": "Jones",
+      "location": "Philadelphia",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "7",
+      "firstName": "Layla",
+      "lastName": "Scott",
+      "location": "San Antonio",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "8",
+      "firstName": "Oliver",
+      "lastName": "Williams",
+      "location": "San Diego",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "9",
+      "firstName": "Scarlett",
+      "lastName": "King",
+      "location": "Dallas",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "10",
+      "firstName": "Madison",
+      "lastName": " Wright",
+      "location": "San Jose",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "11",
+      "firstName": "Noah",
+      "lastName": "Johnson",
+      "location": "Austin",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "12",
+      "firstName": "Sophia",
+      "lastName": "Clark",
+      "location": "Jacksonville",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "13",
+      "firstName": "Henry",
+      "lastName": "Anderson",
+      "location": "Fort Worth",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "14",
+      "firstName": "Amelia",
+      "lastName": "Ramirez",
+      "location": "Columbus",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "15",
+      "firstName": "Isabella",
+      "lastName": "Lewis",
+      "location": "Indianapolis",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "16",
+      "firstName": "Mia",
+      "lastName": "Robinson",
+      "location": "San Francisco",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "17",
+      "firstName": "Penelope",
+      "lastName": "Torres",
+      "location": "Seattle",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "18",
+      "firstName": "Chloe",
+      "lastName": "Young",
+      "location": "Denver",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "19",
+      "firstName": "Elijah",
+      "lastName": "Brown",
+      "location": "Washington",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "20",
+      "firstName": "James",
+      "lastName": "Garcia",
+      "location": "Nashville",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "21",
+      "firstName": "Benjamin",
+      "lastName": "Miller",
+      "location": "Oklahoma",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "22",
+      "firstName": "Lucas",
+      "lastName": "Wilson",
+      "location": "El Paso",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "23",
+      "firstName": "Evelyn",
+      "lastName": "Walker",
+      "location": "Boston",
+      "phone": "123456789",
+      "gender": "f"
+    },
+    {
+      "id": "24",
+      "firstName": "Alexander",
+      "lastName": "Thomas",
+      "location": "Portland",
+      "phone": "123456789",
+      "gender": "m"
+    },
+    {
+      "id": "25",
+      "firstName": "Emily",
+      "lastName": "Allen",
+      "location": "Detroit",
+      "phone": "123456789",
+      "gender": "m"
+    }
+  ]
+}
