@@ -92,7 +92,9 @@ export class UsersComponent implements OnInit {
       }
   }
 
-  guardar() {
+  guardar($event: any) {
+    $event.preventDefault()
+
     if (this.editing) {
       this.userService.updateUser(this.u).subscribe(response => {
         this.users = response;
