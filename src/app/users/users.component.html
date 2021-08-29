@@ -16,7 +16,7 @@
   <div class="users">
     <div class="card" *ngFor="let user of users">
       <div class="card-header">
-        <h2 class="header-title">{{ user.first_name }} {{ user.last_name }}</h2>
+        <h2 class="header-title">{{ user.firstName }} {{ user.lastName }}</h2>
 
         <img class="header-img" (click)="displayModal(user)" src="./assets/img/icono_editar.svg" alt="Editar">
       </div>
@@ -31,7 +31,7 @@
 
         <div class="card-text">
           <p class="text-city">{{ user.location }}</p>
-          <p class="text-phone">{{ user.phone_number }}</p>
+          <p class="text-phone">{{ user.phone }}</p>
         </div>
       </div>
     </div>
@@ -47,12 +47,12 @@
       <div class="form-container">
         <div class="form-controls">
           <label for="first_name">Nombre:</label>
-          <input class="modal-input" type="text" [(ngModel)]="u.first_name" name="first_name">
+          <input class="modal-input" type="text" [(ngModel)]="u.firstName" name="firstName">
         </div>
 
         <div class="form-controls">
           <label for="last_name">Apellido:</label>
-          <input class="modal-input" type="text" [(ngModel)]="u.last_name" name="last_name">
+          <input class="modal-input" type="text" [(ngModel)]="u.lastName" name="lastName">
         </div>
 
         <div class="form-controls">
@@ -62,7 +62,7 @@
 
         <div class="form-controls">
           <label for="phone_number">Celular:</label>
-          <input class="modal-input" type="text" [(ngModel)]="u.phone_number" name="phone_number">
+          <input class="modal-input" type="text" [(ngModel)]="u.phone" name="phone">
         </div>
 
         <div class="form-controls">

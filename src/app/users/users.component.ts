@@ -16,10 +16,10 @@ export class UsersComponent implements OnInit {
   editing = false;
   u = {
     id: '',
-    first_name: '',
-    last_name: '',
+    firstName: '',
+    lastName: '',
     location: '',
-    phone_number: '',
+    phone: '',
     gender: 'm',
   }
 
@@ -64,10 +64,10 @@ export class UsersComponent implements OnInit {
     if (user){
       this.u = {
           id: user.id,
-          first_name: user.first_name,
-          last_name: user.last_name,
+          firstName: user.firstName,
+          lastName: user.lastName,
           location: user.location,
-          phone_number: user.phone_number,
+          phone: user.phone,
           gender: user.gender,
         }
     }
@@ -84,10 +84,10 @@ export class UsersComponent implements OnInit {
     this.editing = false
     this.u = {
         id: '',
-        first_name: '',
-        last_name: '',
+        firstName: '',
+        lastName: '',
         location: '',
-        phone_number: '',
+        phone: '',
         gender: 'm',
       }
   }
