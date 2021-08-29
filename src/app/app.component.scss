@@ -1,0 +1,51 @@
+$blue: #1976d2;
+
+nav {
+  background-color: $blue;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 3.5rem;
+  margin: 0 auto;
+  max-width: 1150px;
+  padding: 0 0.5rem;
+}
+
+.navbar-brand {
+  color: white;
+  font-family: Poppins;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.navbar-btn {
+  align-items: center;
+  background-color: white;
+  border: 0;
+  border-radius: 0.3rem;
+  color: $blue;
+  cursor: pointer;
+  display: flex;
+  font-family: Poppins;
+  font-size: 0.7rem;
+  padding: 0.5rem 0.6rem;
+}
+
+.btn-img {
+  margin-left: 0.3rem;
+  width: 0.7rem;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 150vw;
+}
