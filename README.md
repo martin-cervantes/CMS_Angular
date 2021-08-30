@@ -1,6 +1,6 @@
 # CMS Angular
 
-This project is about creating a SPA using Angular front-end framework and creating a service to connect with an API, in this case using json-server.
+This project is about creating a SPA using Angular front-end framework and creating a service to connect with an API.
 
 ![screenshot](./Screenshot.png)
 
@@ -12,6 +12,11 @@ This project is about creating a SPA using Angular front-end framework and creat
 - Angular
 - JSON-Server
 - npm
+
+## :mag: Live Demo
+
+[Live Demo Link](https://mcervantes71.github.io/CMS_Angular/index.html)
+
 
 ## :computer: Getting Started
 

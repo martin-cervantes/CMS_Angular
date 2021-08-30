@@ -111,11 +111,13 @@ export class UsersComponent implements OnInit {
 
     if (this.editing) {
       this.userService.updateUser(this.u).subscribe(response => {
-        this.users = response;
+        // this.users = response;
+        console.log(response);
       })
     } else {
       this.userService.createUser(this.u).subscribe(response => {
-        this.users = response;
+        // this.users = response;
+        console.log(response);
       })
     }
 
@@ -127,8 +129,8 @@ export class UsersComponent implements OnInit {
   }
 
   search() {
-    this.userService.search(this.string).subscribe(response => {
-      this.users = response;
-    })
+    // this.userService.search(this.string).subscribe(response => {
+    //   this.users = response;
+    // })
   }
 }
